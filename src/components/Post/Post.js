@@ -25,8 +25,9 @@ const Post = (props) => {
         <Grid item xs={12} sm={6} md={4} lg={4} >
           <Paper className={classes.paper}>
             <h2>User Id: {userId} </h2>
-          <h3>Title:{title}</h3>
-          <p>Body:{body}</p>
+            <h3><small>Post ID: {id} </small></h3>
+            <h3>Title:{title}</h3>
+            <p>Body:{body}</p>
          <Link to={`/post/${id}`} ><button>See Details</button></Link>
           </Paper>
         </Grid>
