@@ -8,15 +8,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
+    padding: theme.spacing(10),
     textAlign: 'center',
-    color: theme.palette.text.secondary,
+    color: theme.palette.text.primary,
   },
 }));
 
 const Post = (props) => {
   const classes = useStyles();
-  const {title,body,id} = props.post;
+  const {title,body,id,userId} = props.post;
   return (
     <div className={classes.root}>
      
@@ -24,8 +24,9 @@ const Post = (props) => {
     <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={4} lg={4} >
           <Paper className={classes.paper}>
+            <h2>User Id: {userId} </h2>
           <h3>Title:{title}</h3>
-         <p>Body:{body}</p>
+          <p>Body:{body}</p>
          <Link to={`/post/${id}`} ><button>See Details</button></Link>
           </Paper>
         </Grid>
