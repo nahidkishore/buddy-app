@@ -13,6 +13,7 @@ const Comment = () => {
     .then(data =>setComments(data));
   },[])
   
+
   return (
     <div>
       
@@ -21,6 +22,8 @@ const Comment = () => {
         comments.map(comment => <CommentDetails comment={comment} key = {comment.id}></CommentDetails> )
         
       }
+
+   
       
     </div>
   );
