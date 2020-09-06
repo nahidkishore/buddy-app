@@ -1,18 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardContent, Typography, Avatar } from '@material-ui/core';
+import Image from '../Image/Image';
 
 const CommentDetails = (props) => {
   const {name,email,body} = props.comment;
-  //const {thumbnailUrl}=props.image;
+ 
   return (
-    <div>
+    <div className="CommentDetails">
       
-      <Card>
+      <Card >
+        <Avatar>
+          <Image></Image>
+        </Avatar>
         <CardContent>
-          <Avatar > 
-            
-
-          </Avatar>
+          
           <Typography variant="h4" color="textPrimary">
             Name:{name}
           </Typography>
