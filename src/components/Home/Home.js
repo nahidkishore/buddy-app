@@ -9,11 +9,17 @@ const Home = () => {
     .then(data=>setPosts(data))
   },[])
   return (
-    <div>
-      <h2>Posts length: {posts.length}</h2> 
-      {
+    <div className="container">
+      <h2 className="text-center">Posts length: {posts.length}</h2> 
+      <div className="d-flex justify-content-center align-item-center">
+      <div className="row">
+   {
         posts.map(post => <Post post={post}></Post>)
       }
+   </div>
+
+        </div>
+  
     </div>
   );
 };

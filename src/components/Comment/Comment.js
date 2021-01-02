@@ -15,10 +15,10 @@ const Comment = () => {
   
 
   return (
-    <div>
+    <div className="container">
       
-      <PostDetails></PostDetails> <br/>
-    <h2 style={{textAlign: 'center'}} >Comments on this post: </h2>
+      <PostDetails></PostDetails>
+    <h2 style={{textAlign: 'center',color:'green', fontWeight: 'bold'}} className="my-2">Comments on this post: </h2>
       {
         comments.map(comment => <CommentDetails comment={comment} key = {comment.id}></CommentDetails> )
         
